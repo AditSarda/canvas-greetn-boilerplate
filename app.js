@@ -8,12 +8,14 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 
-button.onclick = () => {
-    ctx.fillstyle = "white";
-    ctx.font = "30px Poppins";
+ // Printing text
+ button.onclick = () => {
+     ctx.font = "30px Poppins";
+     ctx.fillStyle = "white";
+     ctx.textAlign = "center";
+     ctx.fillText(message.value, canvas.width / 2, canvas.height / 2);
+ }
 
-    ctx.fillText(message.value, canvas.width / 2, canvas.height / 2);
-}
 
 clear.onclick = () => {
     ctx.clearRect(0, 0, 700, 400);
